@@ -108,3 +108,8 @@ LEFT JOIN types
   ON places.type = types.typeid
 WHERE price >= 50
 ORDER BY placeid ASC
+
+-- 160304
+SELECT name, email, places.title, places.rating FROM users
+LEFT JOIN places
+ON users.userid = places.host
