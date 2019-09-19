@@ -78,3 +78,7 @@ price as AMOUNT,
 rating FROM places
 WHERE  rating = 5 
 OR rating = 3
+
+-- 160209
+SELECT userid, name, email FROM users
+WHERE  userid = 2 OR userid = 3
