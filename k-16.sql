@@ -66,3 +66,7 @@ WHERE price between 80 AND 150
 -- 160206
 SELECT placeid, title, price FROM places
 ORDER BY price ASC
+
+-- 160207
+SELECT * FROM places
+WHERE title LIKE 'Amazing%'
