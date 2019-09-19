@@ -92,3 +92,19 @@ ON places.type = types.typeid
 SELECT placeid, title, price, types.name FROM places
 LEFT JOIN types
 ON places.type = types.typeid
+
+-- 160303
+SELECT
+  placeid,
+  title,
+  price,
+  types.name,
+  users.name,
+  users.email
+FROM places
+LEFT JOIN users
+  ON places.host = users.userid
+LEFT JOIN types
+  ON places.type = types.typeid
+WHERE price >= 50
+ORDER BY placeid ASC
