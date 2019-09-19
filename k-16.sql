@@ -33,3 +33,14 @@ VALUES ('Amazing Villa by the Ocean', 150, 5, 'Phuket', 1, 2),
 ('Cool flat in trendy area', 80, 5, 'Chiang Mai', 2, 4), 
 ('Stylish room in city center', 50, 3, 'Bangkok', 3, 2), 
 ('Cozy room by the beach', 40, 4, 'Samui', 3, 1)
+
+-- 160104
+CREATE TABLE likes (
+  userid INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR (255),
+  email VARCHAR (255),
+  PRIMARY KEY (userid)
+)
+
+INSERT INTO likes (user, place)
+VALUES (1, 1), (1, 2), (2 ,1), (2, 2), (2, 4), (3, 1), (3, 3), (3, 4) 
