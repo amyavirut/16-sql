@@ -70,3 +70,11 @@ ORDER BY price ASC
 -- 160207
 SELECT * FROM places
 WHERE title LIKE 'Amazing%'
+
+-- 160208
+SELECT placeid, 
+itle as NAME, 
+price as AMOUNT, 
+rating FROM places
+WHERE  rating = 5 
+OR rating = 3
