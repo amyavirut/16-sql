@@ -88,3 +88,7 @@ SELECT * FROM places
 LEFT JOIN types
 ON places.type = types.typeid
 
+-- 160302
+SELECT placeid, title, price, types.name FROM places
+LEFT JOIN types
+ON places.type = types.typeid
