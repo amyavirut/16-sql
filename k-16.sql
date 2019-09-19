@@ -126,3 +126,11 @@ ON likes.place = places.placeid
 LEFT JOIN users
 ON likes.user = users.userid
 ORDER BY places.title
+
+-- 160307
+SELECT places.title, users.name AS fan FROM likes
+RIGHT JOIN places
+ON likes.place = places.placeid
+INNER JOIN users
+ON likes.user = users.userid
+ORDER BY users.name
