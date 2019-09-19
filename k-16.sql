@@ -36,11 +36,11 @@ VALUES ('Amazing Villa by the Ocean', 150, 5, 'Phuket', 1, 2),
 
 -- 160104
 CREATE TABLE likes (
-  userid INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR (255),
-  email VARCHAR (255),
-  PRIMARY KEY (userid)
-)
+  likeid INT NOT NULL AUTO_INCREMENT,
+  user INT (11),
+  place INT (11),
+  PRIMARY KEY (id)
+);
 
 INSERT INTO likes (user, place)
 VALUES (1, 1), (1, 2), (2 ,1), (2, 2), (2, 4), (3, 1), (3, 3), (3, 4) 
@@ -61,7 +61,7 @@ WHERE city = 'Samui'
 
 -- 160205
 SELECT * FROM places
-WHERE price between 80 AND 150
+WHERE price BETWEEN 80 AND 150
 
 -- 160206
 SELECT placeid, title, price FROM places
@@ -73,12 +73,18 @@ WHERE title LIKE 'Amazing%'
 
 -- 160208
 SELECT placeid, 
-itle as NAME, 
+title as NAME, 
 price as AMOUNT, 
 rating FROM places
-WHERE  rating = 5 
+WHERE rating = 5 
 OR rating = 3
 
 -- 160209
 SELECT userid, name, email FROM users
-WHERE  userid = 2 OR userid = 3
+WHERE userid = 2 OR userid = 3
+
+-- 160301
+SELECT * FROM places
+LEFT JOIN types
+ON places.type = types.typeid
+
