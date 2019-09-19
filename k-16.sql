@@ -50,3 +50,7 @@ SELECT * FROM places
 
 -- 160202
 SELECT placeid, title, price FROM places
+
+-- 160203
+SELECT * FROM places
+WHERE type = 1
