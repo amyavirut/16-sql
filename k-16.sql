@@ -113,3 +113,8 @@ ORDER BY placeid ASC
 SELECT name, email, places.title, places.rating FROM users
 LEFT JOIN places
 ON users.userid = places.host
+
+-- 160305
+SELECT name, email, places.title, places.rating FROM users
+INNER JOIN places
+ON users.userid = places.host
