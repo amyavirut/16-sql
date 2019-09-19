@@ -134,3 +134,13 @@ ON likes.place = places.placeid
 INNER JOIN users
 ON likes.user = users.userid
 ORDER BY users.name
+
+-- 160308
+SELECT users.name AS fan, places.title, types.name FROM likes
+RIGHT JOIN places
+ON likes.place = places.placeid
+INNER JOIN users
+ON likes.user = users.userid
+INNER JOIN types
+ON places.type = types.typeid
+ORDER BY users.name
